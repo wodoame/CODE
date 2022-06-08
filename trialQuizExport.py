@@ -34,6 +34,9 @@ def main():
         10: "what is the value of e^(ln(3.142)) >> "
 
     }
+    
+    
+    
     answers = {
         
         1: "cross product",
@@ -47,11 +50,15 @@ def main():
         9: "true",
         10: "3.142"
     }
-    j = randint(1, len(questions))
-    k = 1
-    score = 0
+    
+    
+    
+    
     command = "y"
     while command == "y":
+        j = randint(1, len(questions))
+        k = 1
+        score = 0
         try:
             while time_limit > 0:
                 answer = input(f"\nquestion {k}: {questions.get(j)}").lower().strip()
@@ -69,9 +76,7 @@ def main():
             if command == "y":
                 time_limiter = Thread(target=timer)
                 time_limiter.start()
-                k = 1
-                j = randint(1, len(questions))
-                score = 0
+                
 
 
     
