@@ -48,7 +48,7 @@ def main():
         except ZeroDivisionError:
             print("[can't solve]\n")
         except ValueError:
-            print("[no entry recorded the entry]\n")
+            print("[no entry recorded / the entry is invalid]\n")
         finally:
             inputType = "none-yet"
             while inputType == "not-correct" or inputType == "none-yet":
