@@ -1,6 +1,6 @@
 def main():
     # solving a system of three equations using the Gauss elimination method
-    # The equation are of the form ax + by + cz = d
+    # The equations are of the form ax + by + cz = d
     from time import sleep as pause
     n = "no-value-input"
     while n == "y" or n == "no-value-input":
