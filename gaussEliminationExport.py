@@ -1,7 +1,7 @@
 def main():
     # solving a system of three equations using the Gauss elimination method
     # The equations are of the form ax + by + cz = d
-    from time import sleep as pause
+    
     n = "no-value-input"
     while n == "y" or n == "no-value-input":
         try:
@@ -39,11 +39,11 @@ def main():
                 y1 = R2[3]
                 x1 = R1[3]-(R1[1]*y1 + R1[2]*z1)
                 print("x = {}; y = {}; z = {}".format(x1, y1, z1))
-                pause(1)
+  
                 print("[rounded 1 dp]\nx = {}; y = {}; z = {}\n".format(round(x1, 1), round(y1, 1), round(z1, 1)))
-                pause(1)
+                
                 print("[rounded 2 dp]\nx = {}; y = {}; z = {}\n".format(round(x1, 2), round(y1, 2), round(z1, 2)))
-                pause(1)
+                
                 print("[rounded 3 dp; student-suitable]\nx = {}; y = {}; z = {}\n".format(round(x1, 3), round(y1, 3), round(z1, 3)))
         except ZeroDivisionError:
             print("[can't solve]\n")
