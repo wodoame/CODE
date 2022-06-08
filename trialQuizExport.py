@@ -64,7 +64,7 @@ def main():
             while time_limit > 0:
                 answer = input(f"\nquestion {k}: {questions.get(j)}").lower().strip()
 
-                if answer == answers.get(j, "\nnone"):
+                if answer == answers.get(j):
                     print("that's correct")
                     score += 5
                 else:
