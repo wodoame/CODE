@@ -23,7 +23,7 @@ def main():
     questions = {
                 
         1: "given two vectors a and b, what is the name for a x b or b x a ? >> ",
-        2: "i and k are standard basis vectors, i x k >> ",
+        2: "i and k are standard basis vectors, i x k = >> ",
         3: "the sum of all entries in the main diagonal of a matrix is called what? >> ",
         4: "how many ways can you arrange 5 distinct items in a single line? >> ",
         5: "what is the name of the invisible force that pulls objects to the surface of the earth >> ",
@@ -32,6 +32,7 @@ def main():
         8: "i and j are standard basis vectors i x j = >> ",
         9: "provided n is an integer, if n mod 2 == 0 then n has to be even\nTrue or False >> ",
         10: "what is the value of e^(ln(3.142)) >> "
+       
 
     }
     
