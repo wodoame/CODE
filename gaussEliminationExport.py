@@ -15,7 +15,7 @@ def main():
             print("\n[enter the third row]\n")
             for i, element in enumerate(range(4)):
                 R3.append(float(input("a3{} = ".format(i + 1))))
-            print("[augmented matrix form]\n{}\n{}\n{}\n".format(R1, R2, R3))
+            print("\n[augmented matrix form]\n{}\n{}\n{}\n".format(R1, R2, R3))
             if R1[0] == 0 and R2[0] != 0:
                 R1, R2 = R2, R1
             elif R1[0] == 0 and R3[0] != 0:
