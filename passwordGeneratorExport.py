@@ -1,4 +1,4 @@
-ef main():
+def main():
     import random
     from loops import Int, String
     
