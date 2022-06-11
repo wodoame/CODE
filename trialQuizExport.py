@@ -64,8 +64,8 @@ def main():
             k += 1
         print("\nyour score = {}".format(score))
        
-        input_1 = True
-        while input_1:
+        input_1 = False
+        while not input_1:
             command = str(input("\ndo you want to retry(y/n): ")).strip()
             if command == "y":
                 j = randint(1, len(questions))
