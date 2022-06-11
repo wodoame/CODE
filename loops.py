@@ -8,17 +8,7 @@ class Int:
                 print(messageIfError)
             else: 
                 return input_val
-    
-
-    def checkZeroDivisionError(message, messageIfError=""):
-        check = True
-        while check: 
-            try: 
-                input_val = int(input(message))
-            except ZeroDivisionError:
-                print(messageIfError)
-            else: 
-                return input_val
+   
 
 
 
@@ -33,9 +23,21 @@ class String:
             else: 
                 return input_val 
 
-           
-        
-        
+  
+
+
+class Float:
+    def checkValueError(message, messageIfError=""):
+        check = True 
+        while check:
+            try: 
+                input_val = float(input(message))
+            except ValueError: 
+                print(messageIfError)
+            else: 
+                return input_val
+    
+
 
 
 
