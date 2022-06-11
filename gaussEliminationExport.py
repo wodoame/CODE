@@ -1,20 +1,20 @@
 def main():
+    from loops import Float, String 
     # solving a system of three equations using the Gauss elimination method
     # The equations are of the form ax + by + cz = d
-
-    n = False
-    while not n:
-        try:
+    def algorithms():
+        
+        try: 
             R1, R2, R3, = [], [], []
             print("\n[enter the first row]")
             for i, element in enumerate(range(4)):
-                R1.append(float(input("a1{} = ".format(i + 1))))
+                R1.append(Float.checkValueError("a1{} = ".format(i + 1)))
             print("\n[enter the second row]")
             for i, element in enumerate(range(4)):
-                R2.append(float(input("a2{} = ".format(i + 1))))
+                R2.append(Float.checkValueError("a2{} = ".format(i + 1))) 
             print("\n[enter the third row]")
             for i, element in enumerate(range(4)):
-                R3.append(float(input("a3{} = ".format(i + 1))))
+                R3.append(Float.checkValueError("a3{} = ".format(i + 1)))
 
             if R1[0] == 0 and R2[0] != 0:
                 R1, R2 = R2, R1
@@ -43,21 +43,19 @@ def main():
 
         except ZeroDivisionError:
             print("\n[can't solve]")
-        except ValueError:
-            print("\n[no entry recorded / the entry is invalid]")
+        
+        command = String.loopIfElse("\ndo you want to retry(y/n) >> ", "y", "n")
+        if command == "y":
+            algorithms()
+    
+    algorithms()
+    
 
-        input_1 = False
-        while not input_1:
-            command = str(input("\ndo you want to retry(y/n) >> ").lower().strip())
-            if command == "y":
-                break
-            elif command == "n":
-                n = True
-                break
-            else:
-                print("\n[wrong input]; only 'y' or 'n' accepted")
+    
+            
 
 
 if __name__ == "__main__":
     main()
 
+      
