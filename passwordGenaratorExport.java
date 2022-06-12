@@ -16,8 +16,8 @@ public class Main extends loops {
         specialCharacters = "@&#-_";
         combination = new StringBuilder();
         String[] elements = {string_lower, string_upper, numbers, specialCharacters};
-        int n = loops.exceptionInt("\nhow many characters are in the password >> ", "");
-        int sample = loops.exceptionInt("how many samples >> ", "");
+        int n = exceptionInt("\nhow many characters are in the password >> ", "");
+        int sample = exceptionInt("how many samples >> ", "");
 
         for (int do_loop = 0; do_loop < sample; do_loop++) {
             result = new StringBuilder();
@@ -44,7 +44,7 @@ public class Main extends loops {
 
 
 
-       String command = loops.loopIfElse("\n\ndo you want to retry? >> ", "", "y", "n");
+       String command = loopIfElse("\n\ndo you want to retry? >> ", "", "y", "n");
         if(command.equals("y")){
             main(null);
         }
