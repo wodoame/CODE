@@ -1,5 +1,7 @@
+from loops import Float, String
+
 def main():
-    from loops import Float, String 
+     
     # solving a system of three equations using the Gauss elimination method
     # The equations are of the form ax + by + cz = d
     def algorithms():
