@@ -17,6 +17,11 @@ def factorize(n, array, primes_list):
             break
     return [result, primes_list, completed]
 
+def show(element, n):
+    string = ""
+    for i, j in element.items():
+        string += f"({i} ^ {j}) x " if j != 1 else f"{i} x "
+    return f"prime factorization of {n} = {string[0:len(string) - 2]}"
 
 def main():
 
@@ -42,16 +47,11 @@ def main():
         ints = list(ints)
         final = factorize(output[0], ints, output[1])
         display = Counter(final[1])
-        string = ""
-        for i, j in display.items():
-            string += f"({i} ^ {j}) x " if j != 1 else f"{i} x "
-        print(f"prime factorization of {n} = {string[0:len(string) - 2]}")
+        print(show(display, n))
     else:
         display = Counter(output[1])
-        string = ""
-        for i, j in display.items():
-            string += f"({i} ^ {j}) x " if j != 1 else f"{i} x "
-        print(f"prime factorization of {n} = {string[0:len(string) - 2]}")
+        print(show(display, n))
+
 
     end_time = time.time()
     print(f"\nt = {end_time - start_time} ms")
