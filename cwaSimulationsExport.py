@@ -1,5 +1,7 @@
+from loops import Int, Float, String
+
 def main(): 
-    from loops import Int, Float, String
+    
     # cwa calculations  # prev_num = previous numerator ; prev_den = previous denominator ; array stores cwas
     
     
