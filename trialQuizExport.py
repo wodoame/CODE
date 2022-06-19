@@ -1,26 +1,26 @@
-def main():
-    """main function"""
-    from loops import String 
-    from random import randint
-    from time import sleep
-    from threading import Thread
+from loops import String 
+from random import randint
+from time import sleep
+from threading import Thread
 
-    def main_logic(score):
-        
-        def timer():
-            """timing function"""
-            global time_limit
-            time_limit = 30
-            for i in range(time_limit):
-                time_limit -= 1
-                sleep(1)
-            print("\ntime is up!!\nenter your final answer")
+def timer():
+    """timing function"""
+    global time_limit
+    time_limit = 30
+    for i in range(time_limit):
+        time_limit -= 1
+        sleep(1)
+    print("\ntime is up!!\nenter your final answer")
 
 
-        def set_timer():
+def set_timer():
             time_limiter = Thread(target=timer)
             time_limiter.start()
-
+            
+def main():
+    """main function"""
+    def main_logic(score):
+                
         questions = {
                     
             1: "given two vectors a and b, what is the name for a x b or b x a ? >> ",
