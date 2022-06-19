@@ -1,8 +1,8 @@
+import random
+from loops import Int, String
+
+
 def main():
-    import random
-    from loops import Int, String
-    
-    
     def algorithms(): 
         n = Int.checkValueError("\nhow many characters are in the password >> ")
         sample = Int.checkValueError("how many samples >> ")
