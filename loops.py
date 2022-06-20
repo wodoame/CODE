@@ -1,4 +1,5 @@
-class Int: 
+class Int:
+    @staticmethod
     def checkValueError(message, messageIfError=""):
         check = True 
         while check:
@@ -8,13 +9,16 @@ class Int:
                 print(messageIfError)
             else: 
                 return input_val
-   
+    
+
+    
 
 
 
 
-class String: 
-    def loopIfElse(message, *values, messageIfError= ""):
+class String:
+    @staticmethod
+    def loopIfElse(message, *values, messageIfError=""):
         check = True 
         while check: 
             input_val = str(input(message)).lower().strip()
@@ -23,10 +27,13 @@ class String:
             else: 
                 return input_val 
 
-  
+           
+        
+
 
 
 class Float:
+    @staticmethod
     def checkValueError(message, messageIfError=""):
         check = True 
         while check:
@@ -37,6 +44,22 @@ class Float:
             else: 
                 return input_val
     
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
