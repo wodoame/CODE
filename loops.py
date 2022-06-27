@@ -1,8 +1,7 @@
 class Int:
     @staticmethod
     def checkValueError(message, messageIfError=""):
-        check = True 
-        while check:
+        while True:
             try: 
                 input_val = int(input(message))
             except ValueError: 
@@ -18,9 +17,8 @@ class Int:
 
 class String:
     @staticmethod
-    def loopIfElse(message, *values, messageIfError=""):
-        check = True 
-        while check: 
+    def loopIfElse(message, *values, messageIfError=""): 
+        while True: 
             input_val = str(input(message)).lower().strip()
             if input_val not in values: 
                 print(messageIfError)
@@ -34,9 +32,8 @@ class String:
 
 class Float:
     @staticmethod
-    def checkValueError(message, messageIfError=""):
-        check = True 
-        while check:
+    def checkValueError(message, messageIfError=""): 
+        while True:
             try: 
                 input_val = float(input(message))
             except ValueError: 
