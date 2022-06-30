@@ -8,8 +8,9 @@ def readFrom(filename: str, hashmap: dict):
     with open(filename, "r") as file:
         container = file.readlines()  # a list of all lines
         for line in container:
-            key = int(line[0])
-            value = line[2:-1]
+            dot = line.index(".")
+            key = int(line[0: dot])
+            value = line[dot + 1:-1]
             hashmap.update({key: value})
 
 
