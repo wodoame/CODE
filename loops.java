@@ -7,8 +7,7 @@ public class loops{
     public static int exceptionInt(String message, String messageIfError) {
         Scanner input = new Scanner(System.in);
         int input_val = 0;
-        boolean check = true;
-        while(check){
+        while(true){
 
             try {
                 System.out.print(message);
@@ -33,8 +32,7 @@ public class loops{
     public static float exceptionFloat(String message, String messageIfError){
         Scanner input = new Scanner(System.in);
         float input_val = 0;
-        boolean check = true;
-        while(check){
+        while(true){
 
 
             try {
