@@ -15,7 +15,7 @@ public class loops{
             }
             catch(InputMismatchException e){
                 System.out.println(messageIfError);
-                input.next();
+                input.nextLine();
                 continue;
             }
 
@@ -41,7 +41,7 @@ public class loops{
             }
             catch(InputMismatchException e){
                 System.out.println(messageIfError);
-                input.next();
+                input.nextLine();
                 continue;
             }
             break;
