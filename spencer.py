@@ -7,6 +7,7 @@ def n_format(s_list: list, arg: bool = False)->str:
     mat = s_list
     plus = "+"
     minus = "-"
+    end = "   "
     # taking each string in the list one at a time
     for element in mat:
         a_list = element.split() # splitting separates the elements and puts them in another array
@@ -22,24 +23,24 @@ def n_format(s_list: list, arg: bool = False)->str:
         l_result = len(result)
         maxi = len(max(a_list, key=len)) # finding the maximum item by length in the list
         if l_result >= maxi: #
-            k = len(result) + 2 # the number of times the dash (-) has to be printed
+            k = l_result + 2 # the number of times the dash (-) has to be printed
             d1 = l_result - len(a) # this will define the spacing for first number
             d2 = l_result - len(b) # this will define the spacing for the second number
 
-            line1 += f"  {' '*d1}{a}   "
-            line2 += f"{sep} {' '*d2}{b}   "
-            line3 += f"{'-'*k}   "
-            line4 += f"  {result}   " if arg else ""
+            line1 += f"  {' '*d1}{a}{end}"
+            line2 += f"{sep} {' '*d2}{b}{end}"
+            line3 += f"{'-'*k}{end}"
+            line4 += f"  {result}{end}" if arg else ""
         else:
             k = maxi + 2
             d1 = maxi - len(a) # defines the spacing for the first number
             d2 = maxi - len(b) # defines the spacing for the second number
             d3 = maxi - l_result # defines the spacing for the result
 
-            line1 += f"  {' '*d1}{a}   "
-            line2 += f"{sep} {' '*d2}{b}   "
-            line3 += f"{'-'*k}   "
-            line4 += f"  {' '*d3}{result}   " if arg else ""
+            line1 += f"  {' '*d1}{a}{end}"
+            line2 += f"{sep} {' '*d2}{b}{end}"
+            line3 += f"{'-'*k}{end}"
+            line4 += f"  {' '*d3}{result}{end}" if arg else ""
 
 
     return f"{line1}\n{line2}\n{line3}\n{line4}"
