@@ -1,46 +1,36 @@
 class Int:
     @staticmethod
-    def checkValueError(message, messageIfError=""):
+    def check_value_error(message, error_message=""):
         while True:
-            try: 
+            try:
                 input_val = int(input(message))
-            except ValueError: 
-                print(messageIfError)
-            else: 
+            except ValueError:
+                print(error_message)
+            else:
                 return input_val
-    
-
-    
-
-
 
 
 class String:
     @staticmethod
-    def loopIfElse(message, *values, messageIfError=""): 
-        while True: 
+    def repeat(message, *values, error_message=""):
+        while True:
             input_val = str(input(message)).lower().strip()
-            if input_val not in values: 
-                print(messageIfError)
-            else: 
-                return input_val 
-
-           
-        
-
+            if input_val not in values:
+                print(error_message)
+            else:
+                return input_val
 
 
 class Float:
     @staticmethod
-    def checkValueError(message, messageIfError=""): 
+    def check_value_error(message, error_message=""):
         while True:
-            try: 
+            try:
                 input_val = float(input(message))
-            except ValueError: 
-                print(messageIfError)
-            else: 
+            except ValueError:
+                print(error_message)
+            else:
                 return input_val
-    
 
     
 
