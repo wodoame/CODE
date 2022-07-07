@@ -4,25 +4,26 @@ from time import sleep
 from threading import Thread
 
 
-def readFrom(filename: str, hashmap: dict)->None:
+def read_from(filename: str, hashmap: dict) -> None:
     with open(filename, "r") as file:
-        container = file.readlines()  # a list of all lines
+        container = file.readlines()
         char = "\\n"
         for line in container:
+            line = line.rstrip()
             dot = line.index(".")
             key = int(line[0:dot])
-            value = line[dot + 1:-1]
+            value = line[dot + 1:]
             if char in value:
-                spacing = ' '* len(f"question_____")
+                spacing = f"\t\t\t  "
                 strings = value.split(char)
                 value = f"\n{spacing}".join(strings)
             hashmap.update({key: value})
 
 
-def timer():
+def timer() -> None:
     """timing function"""
     global time_limit
-    time_limit = 30
+    time_limit = 20
     for i in range(time_limit):
         time_limit -= 1
         sleep(1)
@@ -30,33 +31,26 @@ def timer():
     print("[time is up!!; enter final answer]", end=" >> ")
 
 
-
-
-
-
-
-
-def set_timer():
+def set_timer() -> None:
     time_limiter = Thread(target=timer)
     time_limiter.start()
 
-def main():
-    """main function"""
-    filename_q = "C:\\Users\\WODOAME\\Desktop\\new_repository\\sample.txt"
-    filename_a = "C:\\Users\\WODOAME\\Desktop\\new_repository\\answers.txt"
+
+def main() -> None:
+
+    filename_q = "C:\\Users\\WODOAME\\Desktop\\DC_MACHINES\\questions.txt"
+    filename_a = "C:\\Users\\WODOAME\\Desktop\\DC_MACHINES\\answers.txt"
 
     questions = {}
     answers = {}
-    readFrom(filename_q, questions)
-    readFrom(filename_a, answers)
+    read_from(filename_q, questions)
+    read_from(filename_a, answers)
 
-    def main_logic(score):
-
+    def main_logic(score) -> None:
 
         j = randint(1, len(questions))
         k = 1
         set_timer()
-        score = score 
         while time_limit > 0:
             answer = input(f"\nquestion {k}: {questions.get(j)} >> ").lower().strip()
             if answer == answers.get(j):
@@ -68,20 +62,16 @@ def main():
             k += 1
 
         print("\nyour score = {}".format(score))
-    
-        command = String.loopIfElse("\ndo you want to retry(y/n) >> ", "y", "n", messageIfError="[wrong-input]; only 'y' or 'n' accepted")
-        
+
+        command = String.repeat("\ndo you want to retry(y/n) >> ", "y", "n", error_message="[wrong-input]; only 'y' or 'n' accepted")
+
         if command == "y":
             main_logic(0)
 
-
-    main_logic(0)            
-
-
-
+    main_logic(0)
 
 
 if __name__ == "__main__":
     main()
-
+    
 
