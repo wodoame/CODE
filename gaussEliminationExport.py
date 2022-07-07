@@ -1,22 +1,22 @@
 from loops import Float, String
 
+
 def main():
-     
     # solving a system of three equations using the Gauss elimination method
     # The equations are of the form ax + by + cz = d
     def algorithms():
-        
-        try: 
+
+        try:
             R1, R2, R3, = [], [], []
             print("\n[enter the first row]")
             for i, element in enumerate(range(4)):
-                R1.append(Float.checkValueError("a1{} = ".format(i + 1)))
+                R1.append(Float.check_value_error("a1{} = ".format(i + 1)))
             print("\n[enter the second row]")
             for i, element in enumerate(range(4)):
-                R2.append(Float.checkValueError("a2{} = ".format(i + 1))) 
+                R2.append(Float.check_value_error("a2{} = ".format(i + 1)))
             print("\n[enter the third row]")
             for i, element in enumerate(range(4)):
-                R3.append(Float.checkValueError("a3{} = ".format(i + 1)))
+                R3.append(Float.check_value_error("a3{} = ".format(i + 1)))
 
             if R1[0] == 0 and R2[0] != 0:
                 R1, R2 = R2, R1
@@ -41,20 +41,17 @@ def main():
                 print("\nx = {}; y = {}; z = {}".format(x1, y1, z1))
                 print("\n[rounded 1 dp]\nx = {}; y = {}; z = {}".format(round(x1, 1), round(y1, 1), round(z1, 1)))
                 print("\n[rounded 2 dp]\nx = {}; y = {}; z = {}".format(round(x1, 2), round(y1, 2), round(z1, 2)))
-                print("\n[rounded 3 dp; student-suitable]\nx = {}; y = {}; z = {}".format(round(x1, 3), round(y1, 3), round(z1, 3)))
+                print("\n[rounded 3 dp; student-suitable]\nx = {}; y = {}; z = {}".format(round(x1, 3), round(y1, 3),
+                                                                                          round(z1, 3)))
 
         except ZeroDivisionError:
             print("\n[can't solve]")
-        
-        command = String.loopIfElse("\ndo you want to retry(y/n) >> ", "y", "n")
+
+        command = String.repeat("\ndo you want to retry(y/n) >> ", "y", "n")
         if command == "y":
             algorithms()
-    
-    algorithms()
-    
 
-    
-            
+    algorithms()
 
 
 if __name__ == "__main__":
