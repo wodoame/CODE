@@ -1,7 +1,7 @@
 from random import randint
 from loops import String, Int
 
-def main()->None:
+def main() -> None:
     s_dict = {
         1: "rock",
         2: "paper",
@@ -9,7 +9,7 @@ def main()->None:
               }
 
     com = randint(1, 3)
-    user = Int.checkValueError("1 ~ rock\n2 ~ paper\n3 ~ scissors\ninput = ", "strings and floats not allowed\n")
+    user = Int.check_value_error("1 ~ rock\n2 ~ paper\n3 ~ scissors\ninput = ", "strings and floats not allowed\n")
     print(f"computer = {s_dict.get(com)}; user = {s_dict.get(user, 'invalid-input')}")
     a_tuple = (user, com)
     w_message = "[you win]"
@@ -31,7 +31,7 @@ def main()->None:
         case (3, 1):
             print(l_message)
 
-    command = String.loopIfElse("\ndo you want to retry the game(y/n) >> ", "y", "n", messageIfError="[wrong-input]; only 'y' or 'n' accepted\n")
+    command = String.repeat("\ndo you want to retry the game(y/n) >> ", "y", "n", messageIfError="[wrong-input]; only 'y' or 'n' accepted\n")
     if command == "y":
         print()
         main()
