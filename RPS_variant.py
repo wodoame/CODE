@@ -31,7 +31,7 @@ def main() -> None:
         case (3, 1):
             print(l_message)
 
-    command = String.repeat("\ndo you want to retry the game(y/n) >> ", "y", "n", messageIfError="[wrong-input]; only 'y' or 'n' accepted\n")
+    command = String.repeat("\ndo you want to retry the game(y/n) >> ", "y", "n", error_message="[wrong-input]; only 'y' or 'n' accepted\n")
     if command == "y":
         print()
         main()
