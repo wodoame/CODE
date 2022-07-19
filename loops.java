@@ -56,7 +56,7 @@ public class loops{
 
 
 
-    public static String loopIfElse(String message, String messageIfError, String... args) {
+    public static String repeat(String message, String messageIfError, String... args) {
         Scanner input = new Scanner(System.in);
         boolean contains = false;
         String input_val = "";
