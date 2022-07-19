@@ -4,12 +4,11 @@ def n_format(s_list: list, arg: bool = False)->str:
     line2 = ""
     line3 = ""
     line4 = ""
-    mat = s_list
     plus = "+"
     minus = "-"
     end = "   "
     # taking each string in the list one at a time
-    for element in mat:
+    for element in s_list:
         a_list = element.split() # splitting separates the elements and puts them in another array
         a = a_list[0] # setting a to the first number in the list
         b = a_list[2] # setting b to the second number in the list
