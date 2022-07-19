@@ -9,11 +9,11 @@ def main():
         total_credits = 0 
         points_obtained = 0 # always starts at zero per semester  
         total_points = 0   
-        course_count = Int.checkValueError("\nenter the number of courses >> ")
+        course_count = Int.check_value_error("\nenter the number of courses >> ")
 
         for i in range(course_count):
-            score = Float.checkValueError(f"\ncourse[{i + 1}]\nscore >> ")
-            credit = Int.checkValueError("credit hour(s) >> ")
+            score = Float.check_value_error(f"\ncourse[{i + 1}]\nscore >> ")
+            credit = Int.check_value_error("credit hour(s) >> ")
             
             points_obtained += (score * credit)
             total_credits += credit 
@@ -25,7 +25,7 @@ def main():
             print(f"\ncwa progress = {array};\ncurrent cwa = {cwa};\nfriction = {total_points/100}")
         elif total_credits == 0:
             print("\n[can't calculate;  total credits = 0]")
-        command = String.loopIfElse("\ndo you want to continue calculating? >> ", "y", "n")
+        command = String.repeat("\ndo you want to continue calculating? >> ", "y", "n")
         if command == "y":
             print("\nNote: further calculations will be added to your previous results to make a new cwa")
             prev_num = points_obtained 
