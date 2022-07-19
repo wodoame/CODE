@@ -44,7 +44,7 @@ public class Main extends loops {
 
 
 
-       String command = loopIfElse("\n\ndo you want to retry? >> ", "", "y", "n");
+       String command = repeat("\n\ndo you want to retry? >> ", "", "y", "n");
         if(command.equals("y")){
             main(null);
         }
